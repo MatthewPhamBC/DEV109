@@ -18,9 +18,10 @@ body{
 }
   .row{
   position:relative;
-  margin-left:10%;
-  margin-right:10%;
-  text-align:center;
+  margin-left:25%;
+  margin-right:15%;
+  margin-top:10%;
+  margin-bottom: 5%;
   clear:both
 }
 
@@ -41,7 +42,10 @@ body{
   background-color:#787878;
   float:left;
 }
-
+img{
+  margin-left:5px;
+  margin-top:10px;
+}
   #container {
     margin-top:20%;
     margin-left:10%;
@@ -50,11 +54,10 @@ body{
   }
 
   #footer{
-    position:relative;
+    position:absolute;
     text-align:center;
     border:solid 1px;
     padding: 10px;
-    margin: 10px;
     background-color:lightblue;
     border:0;
   }
