@@ -1,0 +1,49 @@
+header {
+  text-align:center;
+  background-color:lightblue;
+  font-family: "BabelStoneModernRegular";
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+body{
+  background-image:url("https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg");
+.row{
+  position:relative;
+  margin-left:10%;
+  margin-right:10%;
+  clear:both
+}
+
+.white{
+  border: 1px solid black;
+  width: 10%;
+  height: 60px;
+  background-color:white;
+  float:left;
+}
+
+.black{
+  border: 1px solid black;
+  width: 10%;
+  height: 60px;
+  background-color:#787878;
+  float:left;
+}
+
+  #container {
+    margin-top:20%;
+    margin-left:10%;
+    margin-right:10%;
+    margin-bottom:5%;
+  }
+
+  #footer{
+    border:solid 1px;
+    padding: 10px;
+    margin: 40px;
+    background-color:lightblue;
+    border:0;
+  }
