@@ -47,6 +47,8 @@ body{
   }
 
   #footer{
+    position:relative;
+    text-align:center;
     border:solid 1px;
     padding: 10px;
     margin: 40px;
