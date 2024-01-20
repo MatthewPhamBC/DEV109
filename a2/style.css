@@ -20,8 +20,6 @@ body{
   position:relative;
   margin-left:25%;
   margin-right:15%;
-  margin-top:10%;
-  margin-bottom: 5%;
   clear:both
 }
 
@@ -54,10 +52,10 @@ img{
   }
 
   #footer{
-    position:absolute;
+    position:fixed;
     text-align:center;
-    border:solid 1px;
     padding: 10px;
+    margin: auto;
     background-color:lightblue;
     border:0;
   }
