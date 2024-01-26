@@ -1,0 +1,72 @@
+*{
+  font-family: Arial, Verdana, sans-serif;
+  text-align: center;
+}
+h1{
+  color:white; 
+  font-family: 'HacenTunisiaRegular';
+  font-weight: normal;
+  font-style: normal;
+}
+li {
+  display: inline;
+  padding: 0.5em;
+}
+#nav {
+  background-color: #6495ED;
+}
+#nav ul li a{
+  color:white
+}
+body{
+  width: 90%;
+  margin: 0 auto;
+  background-image: url("https://img.freepik.com/free-photo/ultra-detailed-nebula-abstract-wallpaper-4_1562-749.jpg");
+  background-repeat: no-repeat;
+  background-position:center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#content {
+  overflow: auto;
+}
+.column1, .column2, .column3 {
+  width: 31.3%;
+  float: left;
+  margin: 1%;
+}
+.column1 {
+    color: white;
+    background-color: #FF4500;
+}
+.column2 {
+    color: white;
+    background-color: #9370DB;
+}
+.column3 {
+  margin-right: 0%;
+  color: white;
+    background-color: #48D1CC;
+}
+#feature, .article {
+  height: 10em;
+  margin-bottom: 1em;
+}
+#feature {
+  color: white;
+  background-color: #000000;
+  background-image: url("https://cdn.pixabay.com/photo/2016/06/29/11/22/space-1486556_1280.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right; 
+}
+#nav, #feature, #footer {
+  margin: 1%;
+}
+#nav, #footer {
+  padding: 0.5em 0;
+}
+#footer {
+  background-color: #8A2BE2;
+  color: white;
+}
