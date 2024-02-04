@@ -73,7 +73,7 @@ text-align: center;
 }
 #topmenu ul { margin: 0; padding: 0; list-style-type: none;}
 #topmenu li { display: inline; padding: 0 20px 0 0 }
-#topmenu li a { font-weight: bold; text-decoration: none; color: #FFF; font-size: 16px; position: relative;
+#topmenu li a { font-weight: bold; text-decoration: none; color: #FFF; font-size: 14px; position: relative;
 }
 #topmenu li a::after{
     background: #ffffff;
@@ -93,6 +93,7 @@ text-align: center;
 #content { float: left; width: 580px; margin: 10px 0 40px 20px;}
 #content h2 { font-weight: normal; color: #fff; font-size: 22px; line-height: 33px; }
 #content p { font-weight: bold; color: #fff; font-size: 15px;}
+#content p.courseinfo { font-weight: bold; color: #fff; font-size: 15px;}  /* Fix color for link and size. */
 
 .cleft { float: left; width: 280px; margin: 10px 0; }
 .cright { float: right; width: 280px; margin: 10px 0; }
@@ -115,3 +116,7 @@ padding: 20px;
 .left { float: left; }
 .right { float: right; }
 .clear { clear: both; }
+
+.cars { color: #fff;}
+.Resume { color: #fff;}
+.Chessboard {color: #fff;}
