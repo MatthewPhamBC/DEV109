@@ -3,8 +3,6 @@ function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
     downLeft(pHeight, pColorEven, pColorOdd, pSymbol);
     downRight(pHeight, pColorEven, pColorOdd, pSymbol);
     upRight(pHeight, pColorEven, pColorOdd, pSymbol);
-
-
     // UpLeft
     function upLeft(pHeight, pColorEven, pColorOdd, pSymbol){
     var lLine ="";
@@ -20,13 +18,11 @@ function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
     else
     //odd
     lLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
-    
     }
     lLine +="</p>";
     }
     document.getElementById("upLeft").innerHTML = lLine;
     }
-    
     // Down Left
     function downLeft(pHeight, pColorEven, pColorOdd, pSymbol){
     var lLine ="";
@@ -34,7 +30,6 @@ function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
     lLine +="<p>";
     //Create each line on the Rhombus
     for(j=0;j<i;j++){
-    
     //Is the position even or odd so we change the color
     if (j%2)
     //even
@@ -42,13 +37,11 @@ function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
     else
     //odd
     lLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
-    
     }
     lLine +="</p>";
     }
     document.getElementById("downLeft").innerHTML = lLine;
     }
-    
     // Down Right
     function downRight(pHeight, pColorEven, pColorOdd, pSymbol){
     var rLine ="";
@@ -56,7 +49,6 @@ function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
     rLine +="<p>";
     //Create each line on the Rhombus
     for(j=0;j<i;j++){
-    
     //Is the position even or odd so we change the color
     if (j%2)
     //even
@@ -64,13 +56,11 @@ function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
     else
     //odd
     rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
-    
     }
     rLine +="</p>";
     }
     document.getElementById("downRight").innerHTML = rLine;
     }
-
     // Up Right
     function upRight(pHeight, pColorEven, pColorOdd, pSymbol){
         var rLine ="";
@@ -92,6 +82,4 @@ function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
         }
         document.getElementById("upRight").innerHTML = rLine;
         }
-
-
 }
