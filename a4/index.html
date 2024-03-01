@@ -1,1 +1,127 @@
 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="description" content="Artifact 04 - Contact Us">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="gen_validatorv4.js" type="text/javascript"></script>
+        <title>Artifact 04</title>
+    </head>
+    <body>
+        <form id="myform" action="ty.html" onsubmit="isValid();">
+            <p>
+                <label for='FirstName'>First Name:</label>
+                <input type="text" id="FirstName" name="FirstName" />
+            </p>
+            <p>
+                <label for='LastName'>Last Name:</label>
+                <input type="text" id="LastName" name="LastName" />
+            </P>
+            <p>
+                <label for='Email'>Email:</label>
+                <input type="text" id="Email" name="Email" />
+            </p>
+            <p>
+                <label for='Phone'>Phone:</label>
+                <input type="text" id="Phone" name="Phone" />
+            </p>
+            <p>
+                <label for='Username'>Username:</label>
+                <input type="text" id="Username" name="Username" />
+            </p>
+            <p>
+                <label for='Password'>Password:</label>
+                <input type="text" id="Password" name="Password" />
+            </p>
+            <p>
+                <label for='Address'>Address:</label>
+                <input type="text" id="Address" name="Address" />
+            </p>
+            <p>
+                <label for='City'>City:</label>
+                <input type="text" id="City" name="City" />
+            </p>
+            <p>
+                <label for='State'>State:</label>
+                <select id="State" name="State">
+                <option value="000" selected="selected">Choose a State</option>
+                <option value="001">Alabama</option>
+                <option value="002">Alaska</option>
+                <option value="003">Arizona</option>
+                <option value="004">Arkansas</option>
+                <option value="005">California</option> 
+                <option value="006">Colorado</option> 
+                <option value="007">Connecticut</option>
+                <option value="008">Delaware</option> 
+                <option value="009">Florida</option> 
+                <option value="010">Georgia</option> 
+                <option value="011">Hawaii</option> 
+                <option value="012">Idaho</option> 
+                <option value="013">Illinois</option> 
+                <option value="014">Indiana</option>
+                <option value="015">Iowa</option> 
+                <option value="016">Kansas</option> 
+                <option value="017">Kentucky</option> 
+                <option value="018">Louisiana</option> 
+                <option value="019">Maine</option>
+                <option value="020">Maryland</option> 
+                <option value="021">Massachusetts</option> 
+                <option value="022">Michigan</option> 
+                <option value="023">Minnesota</option> 
+                <option value="024">Mississippi</option>
+                <option value="025">Missouri</option> 
+                <option value="026">Montana</option> 
+                <option value="027">Nebraska</option> 
+                <option value="028">Nevada</option>
+                <option value="029">New Hampshire</option> 
+                <option value="030">New Jersey</option>
+                <option value="031">New Mexico</option> 
+                <option value="032">New York</option> 
+                <option value="033">North Carolina</option> 
+                <option value="034">North Dakota</option> 
+                <option value="035">Ohio</option> 
+                <option value="036">Oklahoma</option>
+                <option value="037">Oregon</option> 
+                <option value="038">Pennsylvania</option> 
+                <option value="039">Rhode Island</option> 
+                <option value="040">South Carolina</option>
+                <option value="041">South Dakota</option> 
+                <option value="042">Tennessee</option> 
+                <option value="043">Texas</option> 
+                <option value="044">Utah</option> 
+                <option value="045">Vermont</option> 
+                <option value="046">Virginia</option> 
+                <option value="047">Washington</option> 
+                <option value="048">Washington DC</option> 
+                <option value="049">West Virginia</option> 
+                <option value="050">Wisconsin</option> 
+                <option value="051">Wyoming</option> 
+                </select>
+            </p>
+            <p>
+                <label for='Country'>Country:</label>
+                <input type="text" id="Country" name="Country" />
+            </p>
+            <p>
+                <label for='ZipCode'>ZipCode:</label>
+                <input type="text" id="ZipCode" name="ZipCode" />
+            </p>
+            <p>
+                <label for='Comments'>Comments:</label>
+                <input type="text" id="Comments" name="Comments" />
+            </p>
+            
+            <div class="warning" id="fname"></div>
+            
+            <p>
+                <input type="submit" id="submit" name="submit" value="Submit">
+            </p>
+        
+            <div class="warning" id="submiterror"></div>
+        
+        </form>
+
+        <script src="validator.js" type="text/javascript"></script>
+    </body>
+</html>
