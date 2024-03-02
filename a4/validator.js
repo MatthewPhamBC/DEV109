@@ -1,165 +1,147 @@
-function isValid() {
-    if (firstName() && lastName() && eMail() && pHone() && userName() && passWord() && zipCode()
-    
-    )
-    return true;
-    else
-        document.getElementById("submiterror").innerHTML = "<p><strong>Error Submitting — See Above</strong></p>";
-        event.preventDefault();
-        return false;
-}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="description" content="Artifact 04 - Contact Us">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="gen_validatorv4.js"></script>
+        <title>Artifact 04</title>
+    </head>
+    <body>
+        <form id="myform" action="ty.html" onsubmit="isValid();">
+            <p>
+                <label for='FirstName'>First Name:</label>
+                <input type="text" id="FirstName" name="FirstName">
+            </p>
+            <p>
+                <label for='LastName'>Last Name:</label>
+                <input type="text" id="LastName" name="LastName">
+            </P>
+            <p>
+                <label for='Email'>Email:</label>
+                <input type="text" id="Email" name="Email">
+            </p>
+            <p>
+                <label for='Phone'>Phone:</label>
+                <input type="text" id="Phone" name="Phone">
+            </p>
+            <p>
+                <label for='UserName'>Username:</label>
+                <input type="text" id="UserName" name="UserName">
+            </p>
+            <p>
+                <label for='PassWord'>Password:</label>
+                <input type="text" id="PassWord" name="PassWord">
+            </p>
+            <p>
+                <label for='Address'>Address:</label>
+                <input type="text" id="Address" name="Address">
+            </p>
+            <p>
+                <label for='City'>City:</label>
+                <input type="text" id="City" name="City">
+            </p>
+            <p>
+                <label for='State'>State:</label>
+                <select id="State" name="State">
+                <option value="000" selected="selected">Choose a State</option>
+                <option value="001">Alabama</option>
+                <option value="002">Alaska</option>
+                <option value="003">Arizona</option>
+                <option value="004">Arkansas</option>
+                <option value="005">California</option> 
+                <option value="006">Colorado</option> 
+                <option value="007">Connecticut</option>
+                <option value="008">Delaware</option> 
+                <option value="009">Florida</option> 
+                <option value="010">Georgia</option> 
+                <option value="011">Hawaii</option> 
+                <option value="012">Idaho</option> 
+                <option value="013">Illinois</option> 
+                <option value="014">Indiana</option>
+                <option value="015">Iowa</option> 
+                <option value="016">Kansas</option> 
+                <option value="017">Kentucky</option> 
+                <option value="018">Louisiana</option> 
+                <option value="019">Maine</option>
+                <option value="020">Maryland</option> 
+                <option value="021">Massachusetts</option> 
+                <option value="022">Michigan</option> 
+                <option value="023">Minnesota</option> 
+                <option value="024">Mississippi</option>
+                <option value="025">Missouri</option> 
+                <option value="026">Montana</option> 
+                <option value="027">Nebraska</option> 
+                <option value="028">Nevada</option>
+                <option value="029">New Hampshire</option> 
+                <option value="030">New Jersey</option>
+                <option value="031">New Mexico</option> 
+                <option value="032">New York</option> 
+                <option value="033">North Carolina</option> 
+                <option value="034">North Dakota</option> 
+                <option value="035">Ohio</option> 
+                <option value="036">Oklahoma</option>
+                <option value="037">Oregon</option> 
+                <option value="038">Pennsylvania</option> 
+                <option value="039">Rhode Island</option> 
+                <option value="040">South Carolina</option>
+                <option value="041">South Dakota</option> 
+                <option value="042">Tennessee</option> 
+                <option value="043">Texas</option> 
+                <option value="044">Utah</option> 
+                <option value="045">Vermont</option> 
+                <option value="046">Virginia</option> 
+                <option value="047">Washington</option> 
+                <option value="048">Washington DC</option> 
+                <option value="049">West Virginia</option> 
+                <option value="050">Wisconsin</option> 
+                <option value="051">Wyoming</option> 
+                </select>
+            </p>
+            <p>
+                <label for='Country'>Country:</label>
+                <select id="Country" name="Country">
+                <option value="000" selected="selected">Choose a Country</option>
+                <option value="USA">USA</option>
+                <option value="China">China</option>
+                <option value="India">India</option>
+                <option value="Japan">Japan</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+                <option value="Vietnam">Vietnam</option>
+                </select>
+            </p>
+            <p>
+                <label for='ZipCode'>ZipCode:</label>
+                <input type="text" id="ZipCode" name="ZipCode">
+            </p>
+            <p>
+                <label for='Comments'>Comments:</label>
+                <input type="text" id="Comments" name="Comments">
+            </p>
+            
+                <div class="warning" id="fname"></div> <!-- First Name-->
 
-FirstName.addEventListener('blur', firstName, false);
-LastName.addEventListener('blur', lastName, false);
-Phone.addEventListener('blur', pHone, false);
-Email.addEventListener('blur', eMail, false);
-UserName.addEventListener('blur', userName, false);
-PassWord.addEventListener('blur', passWord, false);
-ZipCode.addEventListener('blur', zipCode, false);
-// First Name Field
-function firstName(){
-    //1) Create variable
-    var validFirstname=false;
+                <div class="warning" id="lname"></div> <!-- last Name-->
 
-    //2) read value from HTML
-    var firstname = document.getElementById("FirstName").value;
-    var errorMessages = "";
-    //3) Do validation
-    if (firstname==="null" || firstname==="" || firstname.length > 20 ) {
-        errorMessages += "<p>The first name is required and cannot be greater than 20 characters.</p>";
-        console.log("First name invalid — length")
-        } else if (firstname.match("^[a-zA-Z ,.'-]+$")===null) {
-            errorMessages += "<p>Invalid caracter in first name (accepts only A-Z, a-z, and ,.'-)</p>";
-            console.log("First name invalid — bad characters")
-        } else {
-                validFirstname = true;
-                console.log("First name valid")
-        };
+                <div class="warning" id="uname"></div> <!-- UserName.-->
 
+                <div class="warning" id="passwarning"></div> <!-- Password-->
 
-    //4) Send error message to HTML
-    document.getElementById("fname").innerHTML = errorMessages;
+                <div class="warning" id="ewarning"></div> <!-- Email--> 
 
-    //5) return status of each field
-    return (validFirstname)
-};
+                <div class="warning" id="phwarning"></div> <!-- Phone--> 
 
-// Last Name Field
-function lastName() {
-    var validLastname=false;
+                <div class="warning" id="zwarning"></div> <!-- Zip code--> 
+            <p>
+                <input type="submit" id="submit" name="submit" value="Submit">
+            </p>
 
-    var lastname = document.getElementById("LastName").value;
-    var errorMessages = "";
+            <div class="warning" id="submiterror"></div>
+        
+        </form>
 
-    if (lastname==="null" || lastname==="" || lastname.length > 50) {
-        errorMessages += "<p>The last name is required and cannot be greater than 50 characters.</p>";
-        console.log("Last name invalid - length")
-    } else if(lastname.match("^[a-zA-Z ,.'-]+$")===null) {
-        errorMessages += "<p>Invalid caracter in last name (accepts only A-Z, a-z, and ,.'-)</p>";
-        console.log("Last name invalid — bad characters")
-    } else {
-        validLastname = true;
-        console.log("Last name valid")
-    }
-
-    document.getElementById("lname").innerHTML = errorMessages;
-
-    return (validLastname)
-};
-
-
-// Email
-function eMail() {
-    var validEmail=false;
-    var userEmail = document.getElementById("Email").value;
-    var atpos = userEmail.indexOf("@");
-    var dotpos = userEmail.lastIndexOf(".");
-    var errorMessages = "";
-
-    if (atpos<1 || dotpos<atpos+2 || dotpos+2>userEmail.length) {
-        errorMessages += "<p>Invalid Email.</p>"
-    } else {
-        validEmail=true;
-        console.log("Email Valid.")
-    }
-
-    document.getElementById("ewarning").innerHTML = errorMessages;
-
-    return(validEmail)
-}
-
-// Phone
-function pHone() {
-    var validPhone=false;
-    var phone = document.getElementById("Phone").value;
-    var errorMessages = "";
-    if (isNaN(phone) || phone.length >15 || phone===null || phone ==="") {
-        errorMessages += "<p> Invalid phone number.</p>"
-    } else {
-        validPhone=true;
-        console.log("Phone Valid.")
-    }
-    
-    document.getElementById("phwarning").innerHTML = errorMessages;
-
-    return(validPhone)
-}
-
-// Username
-function userName() {
-    var validUsername = false;
-
-    var username = document.getElementById("UserName").value;
-    var errorMessages = "";
-    if (username==="null" || username==="" || username.length > 12) {
-        errorMessages += "<p>The Username is required and cannot be greater than 12 characters.</p>";
-        console.log("username invalid - length")
-    } else {
-        validUsername = true;
-        console.log("Username valid")
-    }
-
-    document.getElementById("uname").innerHTML = errorMessages;
-
-    return(validUsername)
-}
-
-// Password
-function passWord() {
-    var validPassword = false;
-
-    var password = document.getElementById("PassWord").value; 
-    var errorMessages = "";
-    if (password==="null" || password==="" || password.length > 7) {
-        errorMessages += "<p>The Password is required and cannot be greater than 7 characters.</p>";
-        console.log("username invalid - length") 
-    } else {
-        validPassword = true;
-        console.log("Password valid")
-    }
-
-    document.getElementById("passwarning").innerHTML = errorMessages;
-
-    return(validPassword)
-}
-
-// ZipCode
-function zipCode() {
-var country = document.getElementById("Country").value;
-var zipCode = document.getElementById("ZipCode").value;
-    var validZipCode=false;
-    var errorMessages = "";
-
-    if(country === "USA") {
-       if(zipCode === "null" || zipCode==="" || zipCode.length >= 6) {
-        errorMessages += "<p>A zip is required cannot be greater than 5 characters.</p>";
-        console.log("Zip code invalid - length")
-       } else {
-        validZipCode=true;
-        console.log("Zip Code valid.")
-    }    
-    } 
-    document.getElementById("zwarning").innerHTML = errorMessages;
-
-    return(validZipCode) 
-}
+        <script src="validator.js"></script>
+    </body>
+</html>
