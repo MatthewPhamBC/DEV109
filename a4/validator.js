@@ -11,11 +11,11 @@ function isValid() {
 
 FirstName.addEventListener('blur', firstName, false);
 LastName.addEventListener('blur', lastName, false);
-PHOne.addEventListener('blur', pHone, false);
-EMAil.addEventListener('blur', eMail, false);
+Phone.addEventListener('blur', pHone, false);
+Email.addEventListener('blur', eMail, false);
 UserName.addEventListener('blur', userName, false);
 PassWord.addEventListener('blur', passWord, false);
-zipCode.addEventListener('blur', zipCode, false);
+ZipCode.addEventListener('blur', zipCode, false);
 // First Name Field
 function firstName(){
     //1) Create variable
@@ -71,7 +71,7 @@ function lastName() {
 // Email
 function eMail() {
     var validEmail=false;
-    var userEmail = document.getElementById("email").value;
+    var userEmail = document.getElementById("Email").value;
     var atpos = userEmail.indexOf("@");
     var dotpos = userEmail.lastIndexOf(".");
     var errorMessages = "";
@@ -91,7 +91,7 @@ function eMail() {
 // Phone
 function pHone() {
     var validPhone=false;
-    var phone = document.getElementById("phone").value;
+    var phone = document.getElementById("Phone").value;
     var errorMessages = "";
     if (isNaN(phone) || phone.length >15 || phone===null || phone ==="") {
         errorMessages += "<p> Invalid phone number.</p>"
@@ -112,7 +112,7 @@ function userName() {
     var username = document.getElementById("UserName").value;
     var errorMessages = "";
     if (username==="null" || username==="" || username.length > 12) {
-        errorMessages += "<p>The username is required and cannot be greater than 12 characters.</p>";
+        errorMessages += "<p>The Username is required and cannot be greater than 12 characters.</p>";
         console.log("username invalid - length")
     } else {
         validUsername = true;
@@ -131,7 +131,7 @@ function passWord() {
     var password = document.getElementById("PassWord").value; 
     var errorMessages = "";
     if (password==="null" || password==="" || password.length > 7) {
-        errorMessages += "<p>The username is required and cannot be greater than 7 characters.</p>";
+        errorMessages += "<p>The Password is required and cannot be greater than 7 characters.</p>";
         console.log("username invalid - length") 
     } else {
         validPassword = true;
