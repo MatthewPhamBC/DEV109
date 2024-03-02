@@ -26,7 +26,7 @@ function firstName(){
     var errorMessages = "";
     //3) Do validation
     if (firstname==="null" || firstname==="" || firstname.length > 20 ) {
-        errorMessages += "<p>The first name is required and cannot be greater than 20 characters</p>";
+        errorMessages += "<p>The first name is required and cannot be greater than 20 characters.</p>";
         console.log("First name invalid — length")
         } else if (firstname.match("^[a-zA-Z ,.'-]+$")===null) {
             errorMessages += "<p>Invalid caracter in first name (accepts only A-Z, a-z, and ,.'-)</p>";
@@ -151,8 +151,8 @@ var zipCode = document.getElementById("ZipCode").value;
     var errorMessages = "";
 
     if(country === "USA") {
-       if(zipCode === "null" || zipCode==="" || zipCode.length >= 6 || zipCode.length <= 4) {
-        errorNessage += "<p>A zip is required and has to be 5 characters.</p>";
+       if(zipCode === "null" || zipCode==="" || zipCode.length >= 6) {
+        errorMessages += "<p>A zip is required cannot be greater than 5 characters.</p>";
         console.log("Zip code invalid - length")
        } else {
         validZipCode=true;
