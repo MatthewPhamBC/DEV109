@@ -33,7 +33,7 @@ function firstName(){
         errorMessages += "<p>The first name is required and cannot be greater than 20 characters.</p>";
         console.log("First name invalid — length")
         } else if (firstname.match("^[a-zA-Z ,.'-]+$")===null) {
-            errorMessages += "<p>Invalid caracter in first name (accepts only A-Z, a-z, and ,.'-)</p>";
+            errorMessages += "<p>Invalid character in first name (accepts only A-Z, a-z, and ,.'-)</p>";
             console.log("First name invalid — bad characters")
         } else {
                 validFirstname = true;
@@ -59,7 +59,7 @@ function lastName() {
         errorMessages += "<p>The last name is required and cannot be greater than 50 characters.</p>";
         console.log("Last name invalid - length")
     } else if(lastname.match("^[a-zA-Z ,.'-]+$")===null) {
-        errorMessages += "<p>Invalid caracter in last name (accepts only A-Z, a-z, and ,.'-)</p>";
+        errorMessages += "<p>Invalid character in last name (accepts only A-Z, a-z, and ,.'-)</p>";
         console.log("Last name invalid — bad characters")
     } else {
         validLastname = true;
@@ -98,7 +98,7 @@ function pHone() {
     var phone = document.getElementById("Phone").value;
     var errorMessages = "";
     if (isNaN(phone) || phone.length >15 || phone===null || phone ==="") {
-        errorMessages += "<p> A phone number is required and cannot be greater than 15 characters with only numbers.</p>"
+        errorMessages += "<p> A phone number is required and cannot exceed 15 characters with only numbers.</p>"
     } else {
         validPhone=true;
         console.log("Phone Valid.")
