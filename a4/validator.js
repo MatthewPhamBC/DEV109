@@ -153,7 +153,7 @@ function addRess() {
     var address = document.getElementById("Address").value;
     var errorMessages = "";
     if (address===null || address ==="") {
-        errorMessages += "<p> An adress is required.</p>"
+        errorMessages += "<p> An address is required.</p>"
     } else {
         validAddress=true;
         console.log("Address Valid.")
@@ -220,7 +220,7 @@ var zipCode = document.getElementById("ZipCode").value;
     var errorMessages = "";
 
     if(country === "USA") {
-       if(zipCode === "null" || zipCode==="" || zipCode.length >= 6) {
+       if(zipCode==="" || zipCode.length >= 6) {
         errorMessages += "<p>A zip is required cannot be greater than 5 characters.</p>";
         console.log("Zip code invalid - length")
        } else {
