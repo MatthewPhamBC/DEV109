@@ -223,7 +223,10 @@ var zipCode = document.getElementById("ZipCode").value;
        if(zipCode === "null" || zipCode==="" || zipCode.length >= 6) {
         errorMessages += "<p>A zip is required cannot be greater than 5 characters.</p>";
         console.log("Zip code invalid - length")
-       }     
+       } else {
+        validZipCode=true;
+        console.log("Zip Code valid.")
+    }     
     } else {
         validZipCode=true;
         console.log("Zip Code valid.")
