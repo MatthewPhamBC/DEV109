@@ -1,5 +1,5 @@
 function isValid() {
-    if (firstName() && lastName() && eMail() && pHone() && userName() && passWord() && zipCode()
+    if (firstName() && lastName() && eMail() && pHone() && userName() && passWord() && addRess() && citY() && statE() && countrY() && zipCode()
     
     )
     return true;
@@ -15,6 +15,10 @@ Phone.addEventListener('blur', pHone, false);
 Email.addEventListener('blur', eMail, false);
 UserName.addEventListener('blur', userName, false);
 PassWord.addEventListener('blur', passWord, false);
+Address.addEventListener('blur', addRess, false);
+City.addEventListener('blur', citY, false);
+State.addEventListener('blur', statE, false);
+Country.addEventListener('blur', countrY, false);
 ZipCode.addEventListener('blur', zipCode, false);
 // First Name Field
 function firstName(){
@@ -77,7 +81,7 @@ function eMail() {
     var errorMessages = "";
 
     if (atpos<1 || dotpos<atpos+2 || dotpos+2>userEmail.length) {
-        errorMessages += "<p>Invalid Email.</p>"
+        errorMessages += "<p>An email is required please include a @ or period in your email.</p>"
     } else {
         validEmail=true;
         console.log("Email Valid.")
@@ -94,7 +98,7 @@ function pHone() {
     var phone = document.getElementById("Phone").value;
     var errorMessages = "";
     if (isNaN(phone) || phone.length >15 || phone===null || phone ==="") {
-        errorMessages += "<p> Invalid phone number.</p>"
+        errorMessages += "<p> A phone number is required and cannot be greater than 15 characters with only numbers.</p>"
     } else {
         validPhone=true;
         console.log("Phone Valid.")
@@ -112,7 +116,7 @@ function userName() {
     var username = document.getElementById("UserName").value;
     var errorMessages = "";
     if (username==="null" || username==="" || username.length > 12) {
-        errorMessages += "<p>The Username is required and cannot be greater than 12 characters.</p>";
+        errorMessages += "<p>A Username is required and cannot be greater than 12 characters.</p>";
         console.log("username invalid - length")
     } else {
         validUsername = true;
@@ -131,7 +135,7 @@ function passWord() {
     var password = document.getElementById("PassWord").value; 
     var errorMessages = "";
     if (password==="null" || password==="" || password.length > 7) {
-        errorMessages += "<p>The Password is required and cannot be greater than 7 characters.</p>";
+        errorMessages += "<p>A Password is required and cannot be greater than 7 characters.</p>";
         console.log("username invalid - length") 
     } else {
         validPassword = true;
@@ -141,6 +145,71 @@ function passWord() {
     document.getElementById("passwarning").innerHTML = errorMessages;
 
     return(validPassword)
+}
+
+// Address
+function addRess() {
+    var validAddress=false;
+    var address = document.getElementById("Address").value;
+    var errorMessages = "";
+    if (address===null || address ==="") {
+        errorMessages += "<p> An adress is required.</p>"
+    } else {
+        validAddress=true;
+        console.log("Address Valid.")
+    }
+    
+    document.getElementById("addwarning").innerHTML = errorMessages;
+
+    return(validAddress)
+}
+// City
+function citY() {
+    var validCity=false;
+    var city = document.getElementById("City").value;
+    var errorMessages = "";
+    if (city===null || city ==="") {
+        errorMessages += "<p> A City is required.</p>"
+    } else {
+        validCity=true;
+        console.log("City Valid.")
+    }
+    
+    document.getElementById("citwarning").innerHTML = errorMessages;
+
+    return(validCity)
+}
+// State
+function statE() {
+    var validState=false;
+    var state = document.getElementById("State").value;
+    var errorMessages = "";
+    if (state==="000") {
+        errorMessages += "<p> A State is required.</p>"
+    } else {
+        validState=true;
+        console.log("State Valid.")
+    }
+    
+    document.getElementById("stawarning").innerHTML = errorMessages;
+
+    return(validState)
+}
+// Country
+function countrY() {
+    var validCountry=false;
+    var country = document.getElementById("Country").value;
+    var errorMessages = "";
+    if (country==="000") {
+        errorMessages += "<p> A country is required.</p>"
+    } else {
+        validCountry=true;
+        console.log("Country Valid.")
+    }
+    
+    document.getElementById("couwarning").innerHTML = errorMessages;
+
+    return(validCountry)
 }
 
 // ZipCode
