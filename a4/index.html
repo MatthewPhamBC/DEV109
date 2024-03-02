@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -27,12 +26,12 @@
                 <input type="text" id="Phone" name="Phone" />
             </p>
             <p>
-                <label for='Username'>Username:</label>
-                <input type="text" id="Username" name="Username" />
+                <label for='UserName'>Username:</label>
+                <input type="text" id="UserName" name="UserName" />
             </p>
             <p>
-                <label for='Password'>Password:</label>
-                <input type="text" id="Password" name="Password" />
+                <label for='PassWord'>Password:</label>
+                <input type="text" id="PassWord" name="PassWord" />
             </p>
             <p>
                 <label for='Address'>Address:</label>
@@ -101,7 +100,10 @@
             </p>
             <p>
                 <label for='Country'>Country:</label>
-                <input type="text" id="Country" name="Country" />
+                <select id="Country" name="Country">
+                <option value="000" selected="selected">Choose a Country</option>
+                <option value="USA">USA</option>
+                </select>
             </p>
             <p>
                 <label for='ZipCode'>ZipCode:</label>
@@ -111,9 +113,26 @@
                 <label for='Comments'>Comments:</label>
                 <input type="text" id="Comments" name="Comments" />
             </p>
-            
-            <div class="warning" id="fname"></div>
-            
+            <p>
+                <div class="warning" id="fname"></div>
+            <p>
+                <div class="warning" id="lname"></div>
+            </p>
+            <p>
+                <div class="warning" id="uname"></div>
+            </p>
+            <p>
+                <div class="warning" id="passwarning"></div> <!-- Password-->
+            </p>
+            <p>
+                <div class="warning" id="ewarning"></div> <!-- Email--> 
+            </p>
+            <p>
+                <div class="warning" id="phwarning"></div> <!-- Phone--> 
+            </p>
+            <p>
+                <div class="warning" id="zwarning"></div> <!-- Zip code--> 
+            </p>
             <p>
                 <input type="submit" id="submit" name="submit" value="Submit">
             </p>
