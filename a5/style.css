@@ -1,8 +1,13 @@
 img {
     margin: auto;
     display: block;
+    width: 650px;
+    height: 500px;
 }
 p{
+    text-align: center;
+}
+H1{
     text-align: center;
 }
 .Phrases{
