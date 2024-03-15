@@ -91,9 +91,9 @@ body {
     }
     
     #content { float: left; width: 580px; margin: 10px 0 40px 20px;}
-    #content h2 { font-weight: normal; color: #73A37B; font-size: 30px; line-height: 33px; text-align: center; }
+    #content h2 { font-family: 'LemonRegular'; font-style: normal; font-weight: normal; color: #4bd821d3; font-size: 30px; line-height: 33px; text-align: center; }
     #content p { font-weight: bold; color: #fff; font-size: 15px;}
-    #content p.courseinfo { font-weight: bold; color: #fff; font-size: 15px;}  /* Fix color for link and size. */
+    #content p.courseinfo { font-weight: bold; color: #fff; font-size: 15px;} 
     
     #rcontent {float: right;}
     .cleft { float: left; width: 280px; margin: 10px 0; }
@@ -118,6 +118,10 @@ body {
     .right { float: right; }
     .clear { clear: both; }
     
+    .professor {color: rgb(0, 255, 179);}
+    .ptext {color: white;}
+    .questions {color: rgb(0, 255, 179);}
+    .timestamp {color: rgb(172, 223, 31);}
     .cars { color: #fff;}
     .Resume { color: #fff; text-align: center; }
     .Chessboard {color: #fff; text-align: center;}
