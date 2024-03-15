@@ -1,8 +1,8 @@
-function isValid(){
+function isValid() {
     if(firstName() && messAge()
     
     )
-    return true
+    return true;
     else
         document.getElementById("submiterror").innerHTML = "<p><strong>Error Submitting — See Above</strong></p>";
         event.preventDefault();
@@ -13,25 +13,39 @@ FirstName.addEventListener('blur', firstName, false);
 Message.addEventListener('blur', messAge, false);
 
 function firstName(){
-    var validFirstName=false;
-
+    var validFirstname=false;
     var firstname = document.getElementById("FirstName").value;
-    var errorMessage = "";
+    var errorMessages = "";
 
-    if(firstname==="null" || firstname==="" || firstname.length > 15 ) {
-        errorMessages += "<p>The name field is required and cannot be greater than 15 characters.</p>";
-        console.log("Name is invalid — length")
-        } else if (firstname.match("^[a-zA-Z ,.'-]+$")===null) {
-            errorMessages += "<p>Invalid character in first name (accepts only A-Z, a-z, and ,.'-)</p>";
-            console.log("Name invalid — bad characters")
-        } else {
+    if (firstname==="null" || firstname==="" || firstname.length > 15 ) {
+        errorMessages += "<p>Your name is required and cannot be greater than 15 characters.</p>";
+        } 
+        else if (firstname.match("^[a-zA-Z ,.'-]+$")===null) {
+            errorMessages += "<p>Invalid character in your name (accepts only A-Z, a-z, and ,.'-)</p>";
+        } 
+        else 
+        {
                 validFirstname = true;
-                console.log("Name valid")
         };
-
-        document.getElementById("fname").innerHTML = errorMessage;
-
+        document.getElementById("fname").innerHTML = errorMessages;
         return(validFirstname)
 }
 
+function messAge(){
+    var validMessage = false;
+    var message = document.getElementById("Message").value;
+    var errorMessages = "";
+
+    if (message==="null" || message==="") {
+        errorMessages += "<p>A message is required.</p>";
+        } 
+        else 
+        {
+                validMessage = true;
+        };
+
+        document.getElementById("messwarning").innerHTML = errorMessages;
+
+        return(validMessage)
+}
     
